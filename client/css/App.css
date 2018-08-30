@@ -1,0 +1,37 @@
+body {
+  font: 18px "Source Code Pro", monospace;
+  margin: 10px;
+}
+
+.intro {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.leaflet-container {
+  height: 600px;
+  width: 100%;
+  font: 12px "Source Code Pro", monospace;
+}
+
+.leaflet-popup-content > div > div > div:first-child {
+  height: 80px !important;
+  padding-left: 5px;
+}
+
+.popup-title {
+  font-weight: bold;
+}
+
+.pic-label {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.park-image {
+  width: 50px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+
