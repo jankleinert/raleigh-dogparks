@@ -8,11 +8,11 @@ To deploy this app, you'll need a Cloudinary account -- the free tier is fine --
 
 ## Deploying Raleigh Dog Parks to OpenShift
 
-  oc login <...>
-  oc new-project raleigh-dogparks
-  oc new-app https://github.com/jankleinert/raleigh-dogparks
-  oc patch bc/raleigh-dogparks --patch '{"spec":{"resources":{"limits":{"memory":"1Gi"}}}}'
-  oc start-build raleigh-dogparks
-  oc logs -f bc/raleigh-dogparks
-  oc expose service raleigh-dogparks
-  oc get route
+    oc login <...>
+    oc new-project raleigh-dogparks
+    oc new-app https://github.com/jankleinert/raleigh-dogparks
+    oc patch bc/raleigh-dogparks --patch '{"spec":{"resources":{"limits":{"memory":"1Gi"}}}}'
+    oc start-build raleigh-dogparks
+    oc logs -f bc/raleigh-dogparks
+    oc expose service raleigh-dogparks
+    oc get route
