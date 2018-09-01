@@ -8,7 +8,6 @@
 
 # production
 /build
-/bin
 /client/bundle.js
 
 # misc
