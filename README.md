@@ -4,7 +4,7 @@ This web app displays dog parks in and around Raleigh, NC. The user can click on
 
 ## Setup and Dependencies
 
-To deploy this app, you'll need a Cloudinary account -- the free tier is fine -- an OpenShift account, and the oc command line tool. If you don't have one, you can create and OpenShift account [here](https://manage.openshift.com/sign_in).
+To deploy this app, you'll need a Cloudinary account -- the free tier is fine -- an OpenShift account, and the oc command line tool. If you don't have one, you can create an OpenShift account [here](https://manage.openshift.com/sign_in).
 
 ## Deploying Raleigh Dog Parks to OpenShift
 
