@@ -1,7 +1,7 @@
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import router from './routes/routes';
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const router = require('./routes/routes.js');
 
 const app = express();
 app.set('view engine', 'ejs');

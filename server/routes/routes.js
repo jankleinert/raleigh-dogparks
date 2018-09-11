@@ -1,6 +1,6 @@
-import express from 'express';
-import request from 'request';
-import cloudinary from 'cloudinary';
+const express = require('express');
+const request = require('request');
+const cloudinary = require('cloudinary');
 
 const router = express.Router();
 
