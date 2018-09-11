@@ -2,10 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import UploadForm from './UploadForm'
 
-
-var querystring = require('querystring');
-
-
 class PicsPanel extends React.Component {
   constructor() {
     super();
@@ -20,10 +16,9 @@ class PicsPanel extends React.Component {
 
   componentDidMount() {
     this.getPicsData(this);
-
   }
 
-  onClick(e) {
+  onClick() {
     alert('this comes from picspanel');
   }
 
@@ -33,7 +28,6 @@ class PicsPanel extends React.Component {
   }
 
   getPicsData(ev) {
-    
     axios.get('/getImages?id=' + this.props.objId)
     .then(function(response) {
       if(response.data.length > 0) {
@@ -55,18 +49,14 @@ class PicsPanel extends React.Component {
             <div class="pic-label">No pictures from this park yet.</div> : 
             <div class="pic-label">Pictures from this park:</div>          
           }
-
           <div class='image-grid'>
-            {this.state.images.map((urls, idx) => 
+            {this.state.images.map((urls) => 
               <img className='park-image' key={'img-${idx}'} src={urls} height='50'/>
             )}
           </div>
-        </div>
-        
+        </div> 
       );
   }
-    
-
 }
 
 export default PicsPanel;

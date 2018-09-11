@@ -1,10 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Dropzone from 'react-dropzone';
-var querystring = require('querystring');
-
-var CLOUDINARY_UPLOAD_PRESET = 'bhbwxtbc';
-var CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/raleigh-dogparks/image/upload';
+import querystring from 'querystring';
 
 class UploadForm extends React.Component {
   constructor(props) {
@@ -19,11 +16,8 @@ class UploadForm extends React.Component {
     this.setState({
       uploadedFile: files[0]
     });
-
     this.handleImageUpload(files[0]);
   }
-
- 
 
   handleImageUpload(file) {
       var self = this;

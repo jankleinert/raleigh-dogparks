@@ -1,7 +1,8 @@
-var express = require('express');
-var request = require('request');
-var router = express.Router();
-var cloudinary = require('cloudinary');
+import express from 'express';
+import request from 'request';
+import cloudinary from 'cloudinary';
+
+const router = express.Router();
 
 cloudinary.config({ 
   cloud_name: process.env.CLOUDINARY_NAME, 
@@ -24,14 +25,12 @@ router.get('/getMarkers', function(req, res) {
 	});
 });
 
-
 router.route('/insertImage')
 .post(function(req, res) {
 	cloudinary.v2.uploader.upload(req.body.fileData, {tags: req.body.parkId}, function(error, result){
 		res.send(result.secure_url);
 	});
 });
-
 
 router.get('/getImages',function(req, res) {
 	var id = req.query.id;
@@ -47,8 +46,6 @@ router.get('/getImages',function(req, res) {
 			res.send(imageUrls.slice());
 		}
 	});
-
-	
 });
 
-module.exports = router;
+export default router;

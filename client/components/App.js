@@ -5,7 +5,6 @@ import '../css/App.css';
 import PicsPanel from './PicsPanel'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
-
 export default class App extends React.Component {
   constructor() {
     super()
@@ -17,7 +16,6 @@ export default class App extends React.Component {
       parks: [],
     };
     this.getMarkerData = this.getMarkerData.bind(this);
-
   }
 
   handleClick() {
@@ -27,8 +25,7 @@ export default class App extends React.Component {
   componentDidMount() {
     this.getMarkerData(this);
   }
-  
-
+ 
   renderPicsPanel(objId) {
     return (
       <PicsPanel 
@@ -37,8 +34,6 @@ export default class App extends React.Component {
       />
     );
   }
-
-  
 
   getMarkerData(ev) {
     axios.get('/getMarkers')
@@ -69,6 +64,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
-
