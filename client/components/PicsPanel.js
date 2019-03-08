@@ -47,7 +47,7 @@ class PicsPanel extends React.Component {
             addImage = {this.addImage}/>
           {this.state.images.length == 0 ? 
             <div class="pic-label">No pictures from this park yet.</div> : 
-            <div class="pic-label">Pictures from this park:</div>          
+            <div class="pic-label">Cute pictures from this park:</div>          
           }
           <div class='image-grid'>
             {this.state.images.map((urls) => 
