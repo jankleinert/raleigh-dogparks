@@ -10,9 +10,10 @@ To deploy this app, you'll need a Cloudinary account -- the free tier is fine --
 
     oc login <...>
     oc new-project raleigh-dogparks
-    oc new-app https://github.com/jankleinert/raleigh-dogparks
-    oc patch bc/raleigh-dogparks --patch '{"spec":{"resources":{"limits":{"memory":"1Gi"}}}}'
-    oc start-build raleigh-dogparks
+    oc new-app https://github.com/jankleinert/raleigh-dogparks \
+       -e CLOUDINARY_NAME=<your-cloudinary-name> \
+       -e CLOUDINARY_KEY=<your-cloudinary-key> \ 
+       -e CLOUDINARY_SECRET=<your-cloudinary-secret>
     oc logs -f bc/raleigh-dogparks
     oc expose service raleigh-dogparks
     oc get route
