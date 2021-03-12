@@ -17,7 +17,7 @@
     "lodash": ">=4.17.11",
     "merge": ">=1.2.1",
     "react": "^16.4.2",
-    "react-dev-utils": ">=5.0.2",
+    "react-dev-utils": ">=11.0.4",
     "react-dom": "^16.4.2",
     "react-dropzone": "^5.0.1",
     "react-leaflet": "^2.0.1",
